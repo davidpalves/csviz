@@ -62,3 +62,4 @@ csviz -f examples/example.csv
 ```
 
 Output:
+<img width="1487" alt="image" src="https://user-images.githubusercontent.com/14933043/212448141-3cdf8db7-a628-4e13-a4b5-1f93e171bf67.png">
