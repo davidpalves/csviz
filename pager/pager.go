@@ -8,7 +8,7 @@ import (
 )
 
 func Pager(data string) {
-	cmd := exec.Command("/usr/bin/less")
+	cmd := exec.Command(os.ExpandEnv("$PAGER"), "-S")
 
 	// Feed it with the string you want to display.
 	cmd.Stdin = strings.NewReader(data)
