@@ -10,22 +10,25 @@ import (
 )
 
 func init() {
-	rootCmd.Flags().StringP("filepath", "f", "", "Path to the CSV file to be read")
+	rootCmd.PersistentFlags().StringP("filepath", "f", "", "Path to the CSV file to be read")
 }
 
 var rootCmd = &cobra.Command{
 	Use:   "csviz",
 	Short: "Reads CSV directly from terminal",
 	Run: func(cmd *cobra.Command, args []string) {
-		filePath, _ := cmd.Flags().GetString("filepath")
+		filePathFlag, _ := cmd.Flags().GetString("filepath")
 
-		if strings.TrimSpace(filePath) == "" {
+		if strings.TrimSpace(filePathFlag) == "" && len(args) == 0 {
 			cmd.Usage()
 			return
 		}
 
-		if filePath != "" {
-			reader.RenderTable(filePath)
+		if filePathFlag != "" {
+			reader.RenderTable(filePathFlag)
+		} else if len(args) > 0 {
+			filePathArg := args[0]
+			reader.RenderTable(filePathArg)
 		}
 
 	},
