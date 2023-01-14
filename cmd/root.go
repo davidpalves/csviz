@@ -14,8 +14,9 @@ func init() {
 }
 
 var rootCmd = &cobra.Command{
-	Use:   "csviz",
+	Use:   "csviz [filepath]",
 	Short: "Reads CSV directly from terminal",
+	Args:  cobra.MaximumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		filePathFlag, _ := cmd.Flags().GetString("filepath")
 
