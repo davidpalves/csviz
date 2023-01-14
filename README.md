@@ -48,7 +48,7 @@ The following output will be given:
 Reads CSV directly from terminal
 
 Usage:
-  csviz [flags]
+  csviz [filepath] [flags]
 
 Flags:
   -f, --filepath string   Path to the CSV file to be read
