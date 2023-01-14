@@ -57,9 +57,16 @@ Flags:
 
 ## Demo
 
+#### Simple CSV
+
 ```
 csviz -f examples/example.csv
 ```
 
 Output:
 <img width="1487" alt="image" src="https://user-images.githubusercontent.com/14933043/212448141-3cdf8db7-a628-4e13-a4b5-1f93e171bf67.png">
+
+#### CSV with many columns
+
+Output:
+![CViz Demo of Big CSV](https://user-images.githubusercontent.com/14933043/212472946-d9a68054-93e1-4183-ba5a-c8d03df503e8.gif)
